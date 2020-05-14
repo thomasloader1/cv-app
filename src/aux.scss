@@ -1,9 +1,0 @@
-@for $i from 0 through 100{
-    .font-#{$i}{
-        font-size: #{$i}px !important;
-    }
-}
-
-.rounded-xl{
-    border-radius: 0.7rem !important;
-}
