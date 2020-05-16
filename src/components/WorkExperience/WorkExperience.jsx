@@ -6,11 +6,11 @@ const WorkExpierence = () => {
 
   const useStyles = makeStyles({
     image: {
-      width: "80px",
+      width: "60px",
       borderRadius: "50%",
       boxShadow: "0px 0px 5px 0px rgba(0,0,0,0.3)",
       left: "-15px",
-      top: "-15px",
+      top: "-20px",
       position: "absolute",
       margin: "auto",
       zIndex: "3"
@@ -22,7 +22,7 @@ const WorkExpierence = () => {
     cardBar:{
       borderRadius: "0.5rem",
       padding: "15px 0px",
-      background: "#ffa45c",
+      background: "linear-gradient(45deg,#ffcb52,#ff7b02)",
       color: "white",
       position: "absolute",
       top: "0",

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { works } from "../../services/WorkExperience";
+import './WorkCard.scss'
 
 const WorkCard = ({ classes }) => {
   const state = {
@@ -14,28 +15,34 @@ const WorkCard = ({ classes }) => {
             <div className="text-center">
               <img
                 src={process.env.PUBLIC_URL + work.image}
-                className={classes.image}
+                className="logo-work"
                 alt={work.name}
               />
-              <div className={classes.cardBar}>
-                <span className="font-weight-bold open-sans">{work.start + " - " + work.end}</span>
+              <div className="card-bar">
+                <p className="rubik-500 spacing-2">{work.start + " - " + work.end}</p>
               </div>
             </div>
-            <h4 className="open-sans mb-0 mt-5">{work.name}</h4>
-            <span className="mt-2 mb-1 ml-2 font-14">
-              <i className="fas fa-map-marker-alt fa-sm mr-2"></i> {work.location}
-            </span>
-            <span className="mb-3 ml-2 font-14 pt-2">
-              <i className="fas fa-suitcase fa-sm mr-2"></i>{work.charge}
-            </span>
-            <ul className="list-unstyled">
-              {work.tasks.map((task, index) => (
-                <li key={index} className="my-2">
-                  <i className="fas fa-caret-right fa-sm mr-2"></i>
-                  {task}
-                </li>
-              ))}
-            </ul>
+            <div className="info-content">
+              <h4 className="rubik-700 mb-3 text-uppercase">{work.name}</h4>
+              <div className="card card-body p-1">
+                <p className="mt-2 mb-1 ml-2 font-14">
+                  <i className="fas fa-map-marker-alt fa-sm mr-2"></i> {work.location}
+                </p>
+              </div>
+              <div className="card card-body p-1">
+                <p className="mb-3 ml-2 font-14 pt-2">
+                  <i className="fas fa-suitcase fa-sm mr-2"></i>{work.charge}
+                </p>
+              </div>
+              <ul className="list-unstyled">
+                {work.tasks.map((task, index) => (
+                  <li key={index} className="my-2">
+                    <i className="fas fa-caret-right fa-sm mr-2"></i>
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       ))}
