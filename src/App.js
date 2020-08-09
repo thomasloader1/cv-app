@@ -20,9 +20,9 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-                    <Navbar/>
+                    <Navbar />
                     <div className="container">
-                        <div className="row">
+                        <div className="d-grid work-experience-grid">
                             <WorkExpierence/>
                         </div>
                     </div>

@@ -1,3 +1,7 @@
-.red {
-    background-color: red !important;
+.work-experience-grid {
+    grid-template: {
+        columns: 1fr;
+        rows: repeat(4, 1fr);
+        areas: "fvg" "aufi" "print" "opti";
+    }
 }
